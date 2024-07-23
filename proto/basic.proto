@@ -1,0 +1,14 @@
+syntax = "proto3";
+package basic;
+
+service Responder {
+    rpc RunSth (TestRequest) returns (TestReply) {};
+}
+
+message TestRequest {
+    string query = 1;
+}
+
+message TestReply {
+    string msg = 1;
+}
